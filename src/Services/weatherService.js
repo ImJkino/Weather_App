@@ -20,7 +20,6 @@ const formatCurrentWeather = (data) => {
     sys: { country, sunrise, sunset },
     weather,
     wind: { speed },
-    timezone,
   } = data;
 
   const { main: details, icon } = weather[0];
@@ -41,7 +40,6 @@ const formatCurrentWeather = (data) => {
     details,
     icon,
     speed,
-    timezone,
   };
 };
 
