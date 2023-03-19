@@ -3,6 +3,7 @@ import { formatToLocalTime } from '../Services/weatherService'
  
 
 function TimeAndLocation({weather: {dt, timezone, name, country}}) {
+    console.log("weather----->",dt, timezone)
   return (
     <div>
         <div className='flex items-center justify-center my-6'>

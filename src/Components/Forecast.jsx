@@ -2,7 +2,6 @@ import React from 'react'
 import { iconUrlFromCode } from '../Services/weatherService'
 
 function Forecast({title, items}) { 
-    console.log(items)
   return (
     <div>
         <div className="flex items-center justify-start mt-6">
@@ -13,7 +12,7 @@ function Forecast({title, items}) {
         <div className="flex flex-row items-center justify-between text-white">
             {items.map((item) => {
                 return(
-                <div key={item.idx} className="flex flex-col items-center justify-center">
+                <div key={item.index} className="flex flex-col items-center justify-center">
                     <p className="font-light text-sm">{item.title}</p>
                     <img src={iconUrlFromCode(item.icon)} alt="" className='w-12 my-1'/>
                     <p className="font-medium">{`${item.temp.toFixed()}°`}</p>

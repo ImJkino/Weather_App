@@ -37,7 +37,10 @@ function Inputs({setQuery, units, setUnits}) {
                 type='text' 
                 placeholder='Search for city...' 
                 className='text-xl font-light p-2 w-full focus:outline-none capitalize placeholder:lowercase'
-                onChange={(e)=>setCity(e.currentTarget.value)}/>
+                onChange={(e)=>setCity(e.currentTarget.value)}
+                onKeyDown={(e)=>{if(e.key==='Enter'){
+                    handleSearchClick()
+                }}}/>
             <UilSearch 
                 size={25} 
                 className='text-white cursor-pointer transition ease-out hover:scale-125'
